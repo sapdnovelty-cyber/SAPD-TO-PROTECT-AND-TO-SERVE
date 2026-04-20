@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD | Public Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --police-blue: #112240;
+            --text-white: #f8f9fa;
+            --bg-dark: #050b14;
+            --btn-hover: #e0b86a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Hero Section --- */
+        .join-hero {
+            background: linear-gradient(rgba(5, 11, 20, 0.8), rgba(5, 11, 20, 0.8)), 
+                        url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .join-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* --- Selection Area --- */
+        .portal-container {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .portal-card {
+            background: var(--police-blue);
+            padding: 50px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+        }
+
+        .portal-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .portal-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+        }
+
+        .portal-card p {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            min-height: 60px;
+        }
+
+        /* --- THE BUTTON (LINK) --- */
+        .apply-button {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .apply-button:hover {
+            background: var(--btn-hover);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
+        }
+
+        .warning-text {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 30px;
+            background: #03070d;
+            border-top: 1px solid #1a3a5f;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="join-hero">
+        <h1>Public Service Public</h1>
+        <p style="color: var(--accent-gold); font-weight: 700;">receptionist notify</p>
+    </header>
+
+    <div class="portal-container">
+        
+        <div class="portal-card">
+            <span class="portal-icon">📜</span>
+            <h2>Certificate Good Conduct</h2>
+            <p>Bukti bahwa seseorang berkelakuan baik dan tidak memiliki catatan kriminal.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSevm8DB8KZAHivi0Cg1NJ0WEuqga6pU1faRdC0KWOydtYBkyg/viewform?usp=publish-editor~" class="apply-button">Apply CGC</a>
+        </div>
+
+        <div class="portal-card">
+            <span class="portal-icon">🔫</span>
+            <h2>Weapon License</h2>
+            <p>izin resmi untuk memiliki dan/atau menggunakan senjata secara legal.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScNTwji1NsBSn3hOdW5elMI265EA9mE9TQFrubW0Sb6unznnA/viewform?usp=publish-editor" target="_blank" class="apply-button">Apply Weapon License</a>
+        </div>
+
+        <div class="portal-card">
+            <span class="portal-icon">🌳</span>
+            <h2>Lumbrtjack License</h2>
+            <p>Surat Izin legal yang mengizinkan seseorang untuk menebang pohon di area tertentu,.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScNRmol0ACPS7WbLL_FfbusM6WlR4WYoiZ_rSSmYkUhP0FAGA/viewform?usp=publish-editor" target="_blank" class="apply-button">Apply Lumberjack Lecense</a>
+        </div>
+
+    </div>
+
+    <div class="warning-text">
+        <p>⚠️ Peringatan: Memberikan informasi palsu akan menyebabkan blacklist permanen dari seluruh instansi pemerintahan.</p>
+        <p>Pastikan Anda sudah membaca semua <strong>Requirements</strong> sebelum mengirimkan formulir.</p>
+    </div>
+
+    <footer>
+        <p style="font-size: 0.7rem; color: #555;">&copy; 2026 SAPD Public Service Police. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD | Divisions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --police-blue: #112240;
+            --text-white: #f8f9fa;
+            --bg-dark: #050b14;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            padding-bottom: 50px;
+        }
+
+        /* --- Header Section --- */
+        .division-header {
+            background: linear-gradient(rgba(5, 11, 20, 0.8), rgba(5, 11, 20, 0.9)), 
+                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000');
+            padding: 100px 5% 60px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .division-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .division-header p {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* --- Grid Container --- */
+        .division-container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- Division Card --- */
+        .div-card {
+            background: var(--police-blue);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 25px;
+            position: relative;
+        }
+
+        .div-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        /* SLOT LOGO DIVISI */
+        .div-logo-wrapper {
+            width: 140px;
+            height: 140px;
+            background: rgba(10, 25, 47, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 2px solid var(--accent-gold);
+            padding: 15px;
+        }
+
+        .div-logo-wrapper img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3));
+        }
+
+        .div-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            min-height: 3.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .div-card p {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .div-tag {
+            font-size: 0.7rem;
+            background: rgba(197, 160, 89, 0.2);
+            padding: 5px 12px;
+            border-radius: 5px;
+            color: var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Responsif */
+        @media (max-width: 480px) {
+            .division-header h1 { font-size: 2rem; }
+            .division-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="division-header">
+        <h1>Specialized Divisions</h1>
+        <p>Integrity - Professionalism - Courage</p>
+    </header>
+
+    <div class="division-container">
+
+        <div class="div-card">
+            <div class="div-logo-wrapper">
+                <img src="img/Logo_Division.webp">
+            </div>
+            <div class="div-tag">Internal Security</div>
+            <h3>Internal Affairs Division</h3>
+            <p>Mengawasi integritas personil dan menangani investigasi internal terhadap pelanggaran kode etik di dalam departemen.</p>
+        </div>
+
+        <div class="div-card">
+            <div class="div-logo-wrapper">
+                <img src="img/Divison.png" alt="RED Logo">
+            </div>
+            <div class="div-tag">Human Resources</div>
+            <h3>Recruitment & Employment</h3>
+            <p>Bertanggung jawab atas proses seleksi personil baru, pelatihan akademi, dan manajemen karir seluruh anggota SAPD.</p>
+        </div>
+
+        <div class="div-card">
+            <div class="div-logo-wrapper">
+                <img src="img/divison_2.png">
+            </div>
+            <div class="div-tag">Investigative Unit</div>
+            <h3>Gang Crime Law Unit</h3>
+            <p>Unit investigasi khusus yang berfokus pada pengumpulan bukti hukum dan penuntutan jaringan organisasi kriminal besar.</p>
+        </div>
+
+        <div class="div-card">
+            <div class="div-logo-wrapper">
+                <img src="img/Divison_3.png">
+            </div>
+            <div class="div-tag">Field Enforcement</div>
+            <h3>Gang Enforcement Detail</h3>
+            <p>Unit lapangan yang bertugas melakukan intervensi langsung, patroli area rawan geng, dan menekan aktivitas jalanan secara aktif.</p>
+        </div>
+
+        <div class="div-card">
+            <div class="div-logo-wrapper">
+                <img src="img/Divison_4.png">
+            </div>
+            <div class="div-tag">Tactical & Aerial</div>
+            <h3>Metropolitan & Air Support</h3>
+            <p>Menyediakan dukungan taktis tingkat tinggi (SWAT) dan pengawasan udara menggunakan helikopter untuk pengejaran serta pencarian.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

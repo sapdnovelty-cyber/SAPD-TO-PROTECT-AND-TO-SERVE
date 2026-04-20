@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD | Station Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --police-blue: #162a45;
+            --text-white: #f8f9fa;
+            --bg-dark: #050b14;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+        }
+
+        /* --- Header Khusus Halaman Station --- */
+        .station-header {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), 
+                        url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000');
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .station-header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        /* --- Main Content --- */
+        .station-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Struktur Baris Station (Alternating Layout) */
+        .station-item {
+            display: flex;
+            align-items: center;
+            background: var(--primary-blue);
+            margin-bottom: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            transition: 0.3s;
+        }
+
+        .station-item:hover {
+            border-color: var(--accent-gold);
+            transform: scale(1.01);
+        }
+
+        /* Bagian Logo dalam Station */
+        .station-logo-box {
+            background: var(--police-blue);
+            padding: 40px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 2px solid var(--accent-gold);
+        }
+
+        .station-logo-box img {
+            width: 120px; /* Ukuran Logo Station */
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+        }
+
+        .station-info {
+            padding: 40px;
+        }
+
+        .station-info h2 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #27ae60;
+            color: white;
+            font-size: 0.7rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .station-info p {
+            color: #bdc3c7;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .station-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 0.85rem;
+        }
+
+        .detail-item strong {
+            color: var(--accent-gold);
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .station-item { flex-direction: column; text-align: center; }
+            .station-logo-box { width: 100%; border-right: none; border-bottom: 2px solid var(--accent-gold); }
+            .station-details { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="station-header">
+        <h1>SAPD Jurisdiction Areas</h1>
+        <p style="color: var(--accent-gold);">Mengenal Lebih Dekat Markas Kepolisian San Andreas</p>
+    </header>
+
+    <div class="station-container">
+
+        <div class="station-item">
+            <div class="station-logo-box">
+                <img src="img/Station_1.png" alt="Central HQ Logo">
+                <p style="margin-top: 15px; font-weight: bold; font-size: 0.8rem;">UNIT 01</p>
+            </div>
+            <div class="station-info">
+                <div class="status-badge">OPERATIONAL / ACTIVE</div>
+                <h2>Central HeadQuarter</h2>
+                <p>Terletak di pusat administrasi Los Santos, Central HQ merupakan jantung dari seluruh operasi SAPD. Dilengkapi dengan fasilitas sel tahanan tingkat tinggi, ruang interogasi modern, dan pusat pemantauan CCTV seluruh kota.</p>
+                <div class="station-details">
+                    <div class="detail-item"><strong>Location</strong>Pershing Square, Los Santos</div>
+                    <div class="detail-item"><strong>Station Commander</strong>Lieutenant I #1022 Kyle Ugarte</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="station-item">
+            <div class="station-logo-box">
+                <img src="img/Station_2.png" alt="Dillimore Logo">
+                <p style="margin-top: 15px; font-weight: bold; font-size: 0.8rem;">UNIT 02</p>
+            </div>
+            <div class="station-info">
+                <div class="status-badge">OPERATIONAL / ACTIVE</div>
+                <h2>Dillimore / Foothill Station</h2>
+                <p>Menjaga keamanan di wilayah utara dan Red County. Station ini menjadi garda terdepan untuk patroli hutan dan wilayah perbukitan, serta menangani kasus-kasus kriminalitas di area rural/pedesaan.</p>
+                <div class="station-details">
+                    <div class="detail-item"><strong>Location</strong>Main St., Dillimore</div>
+                    <div class="detail-item"><strong>Station Commander</strong>Vacant</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="station-item">
+            <div class="station-logo-box">
+                <img src="img/Station_3.png" alt="SandStone Logo">
+                <p style="margin-top: 15px; font-weight: bold; font-size: 0.8rem;">UNIT 03</p>
+            </div>
+            <div class="station-info">
+                <div class="status-badge" style="background: #f39c12;">HIGH ALERT AREA</div>
+                <h2>SandStone Station</h2>
+                <p>Beroperasi di lingkungan ekstrem gurun Bone County. SandStone Station fokus pada patroli jalur udara, keamanan perbatasan (border patrol), dan pengejaran kecepatan tinggi di jalur bebas hambatan (highways).</p>
+                <div class="station-details">
+                    <div class="detail-item"><strong>Location</strong>Bone County Desert</div>
+                    <div class="detail-item"><strong>Station Commander</strong>Vacant</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; padding-bottom: 50px; opacity: 0.5; font-size: 0.8rem;">
+        <p>&copy; 2026 San Andreas Police Department. Secure. Protect. Serve.</p>
+    </footer>
+
+</body>
+</html>

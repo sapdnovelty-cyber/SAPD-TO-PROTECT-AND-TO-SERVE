@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD | Public Announcements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --police-blue: #112240;
+            --text-white: #f8f9fa;
+            --bg-dark: #050b14;
+            --danger-red: #d32f2f;
+            --info-blue: #00d2ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* --- Announcement Header --- */
+        .ann-header {
+            background: linear-gradient(rgba(5, 11, 20, 0.8), rgba(5, 11, 20, 0.9)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000');
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .ann-header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* --- Announcement Content --- */
+        .ann-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Card Pengumuman */
+        .ann-card {
+            background: var(--police-blue);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ann-card:hover {
+            transform: scale(1.01);
+            border-color: var(--accent-gold);
+        }
+
+        .ann-image {
+            width: 100%;
+            height: 250px;
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ann-body {
+            padding: 30px;
+        }
+
+        /* Tag Berita */
+        .ann-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .tag-urgent { background: var(--danger-red); color: white; }
+        .tag-info { background: var(--info-blue); color: white; }
+        .tag-event { background: var(--accent-gold); color: var(--primary-blue); }
+
+        .ann-date {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .ann-body h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .ann-body p {
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 3px;
+            transition: 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Sidebar Mini (Logo & Quick Links) */
+        .ann-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        .ann-sidebar {
+            background: rgba(197, 160, 89, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .sidebar-logo {
+            width: 100%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.2));
+        }
+
+        @media (max-width: 768px) {
+            .ann-layout { grid-template-columns: 1fr; }
+            .ann-header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ann-header">
+        <h1>Public Announcements</h1>
+        <p style="color: var(--accent-gold); font-weight: bold; letter-spacing: 2px;">NEWS & PRESS RELEASES</p>
+    </header>
+
+    <div class="ann-container">
+        <div class="ann-layout">
+            
+            <div class="ann-main">
+                
+                <div class="ann-card">
+                    <div class="ann-image" style="background-image: url(img/News.png);"></div>
+                    <div class="ann-body">
+                        <span class="ann-tag tag-urgent">Urgent</span>
+                        <span class="ann-date">April 19, 2026</span>
+                        <h2>SAPD NEWS</h2>
+                        <p>We have warnings and education regarding your vehicle so that it is not confiscated by law enforcement officers.</p>
+                        
+                    </div>
+                </div>
+
+               
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
