@@ -1,1 +1,224 @@
-# SAPD-TO-PROTECT-AND-TO-SERVE
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD | San Andreas Police Department</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --police-blue: #1a3a5f;
+            --text-white: #f8f9fa;
+            --bg-dark: #050b14;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            background: rgba(10, 25, 47, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 2px solid var(--accent-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* TEMPAT UNTUK LOGO ANDA */
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gold); /* Ganti dengan background: url('link-logo.png') */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-blue);
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(5, 11, 20, 0.7), rgba(5, 11, 20, 0.7)), 
+                        url(img/Gambar_7.JPEG) no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* --- Content Section --- */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--primary-blue);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+        }
+
+        .btn-join {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn-join:hover {
+            background: #e0b86a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #03070d;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="img/gambar_2.png" alt="SAPD Logo">
+            </div>
+            <div style="line-height: 1;">
+                <span style="font-weight: 800; font-size: 1.2rem; display: block;">SAPD</span>
+                <span style="font-size: 0.6rem; letter-spacing: 1px;">San Andreas Police Department</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="Station.Html">Station</a></li>
+            <li><a href="divisi.html">Divisi</a></li>
+            <li><a href="Annoucement.html">Announcements</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>TO PROTECT AND TO SERVE</h1>
+        <p>San Andreas Police Department </p>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <div class="card">
+                <h3>Requirements</h3>
+                <p> Apa saja yang dibutuhkan warga jika ingin mendaftar menjadi anggota kepolisian
+
+                </p>
+                  <a href="Requirements.html" class="btn-join">Masuk Sekarang</a>
+            </div>
+            <div class="card">
+                <h3>Recruitment & Reinstatement</h3>
+                <p>Recruitment dan Reinstatement.</p>
+                <a href="recruitment.html" class="btn-join">masuk Sekarang</a>
+            </div>
+            <div class="card">
+                <h3>Police Public Service</h3>
+                <p>Request Create Certificate Good Conduct, request create Weapon License, And Request create Lumberjack License</p>
+                <a href="Public_Service.html" class="btn-join">masuk Sekarang</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 San Andreas Police Department. All Rights Reserved.</p>
+        <p>This is a Roleplay Project site.</p>
+    </footer>
+
+</body>
+</html>
